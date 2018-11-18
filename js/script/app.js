@@ -94,7 +94,12 @@ let app = Sammy('#content', function() {
                 console.log('done');
             });
     };
-
+    renderer.pages.details = function(context, options) {
+        const self = this;
+        context.$element().html('');
+        let element = this.render('templates/partial/details.mustache', options);
+        element.appendTo(context.$element());
+    };
     //Events
     event.loadProducts = new Promise(function(resolve, reject) {
         const sources = [
@@ -182,12 +187,22 @@ console.log(lsItem, JSON.parse(lsItem));
         };
         renderer.pages.list.call(this, context, page);
     });
+    this.get("#/details/:id", function(context) {
+        const id = this.params['id'];
+        const product = products[id];
+        const page = {
+            name: 'Details',
+            product: product
+        };
+        renderer.pages.details.call(this, context, page);
+    });
     this.get("#/wishlist", function(context) {
         const page = {
             name: 'Wish List'
         };
         renderer.pages.wishList.call(this, context, page);
     });
+
 });
 
 $( document ).ready(function() {
