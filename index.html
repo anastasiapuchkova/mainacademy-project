@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>Project</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	<!--<link rel="stylesheet" href="js/jquery/jquery-ui-1.12.1.custom/jquery-ui.min.css" />-->
+	<script src="js/jquery/jquery-3.3.1.js"></script>
+	<script src="js/sammy/sammy.js"></script>
+
+	<!--&lt;!&ndash;<script src="js/jquery/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>-->
+    <script src="js/mustache.js"></script>
+    <script src="js/sammy/sammy.mustache.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+	<script src="js/less.min.js" ></script>
+	<script src="js/script.js"></script>
+	<script src="js/script/app.js"></script>
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <!-- Second navbar for categories -->
+        <nav class="navbar navbar-default">
+
+            <!-- Second navbar for search -->
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#navbar-collapse-3">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./">
+                            <img src="img/logo2.png">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-3">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="./">Home</a></li>
+                            <li><a href="#/books">Books</a></li>
+                            <li><a href="#/comics">Comics</a></li>
+                            <li><a href="#/sale">Sale</a></li>
+                            <li><a href="#/wishlist">Wish List</a></li>
+                            <li><a href="#">About</a></li>
+                            <li>
+                                <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a>
+                            </li>
+                        </ul>
+                        <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" />
+                                </div>
+                                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav><!-- /.navbar -->
+    </div><!-- /.container-fluid -->
+</header>
+
+<section class="content-wrapper" id="content"></section>
+
+<footer class="section footer-classic context-dark bg-image">
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4">
+
+
+                    <p>Спроектирован и построен с любовью ко всему миру,автором:<a href="https://www.instagram.com/anastasia._.puchkova/" target="_blank">
+                        @anastasia._.puchkova
+                    </a>
+                    </p>
+                    <!-- Rights-->
+                    <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Украина</span><span>. </span></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3>Contacts</h3>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>058 Николаев,Украина</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>email:</dt>
+                    <dd><a href="mailto:#">shadow3461@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>phones:</dt>
+                    <dd> <a href="tel:#">+38(063)75 33 330</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                <h3>Links</h3>
+                <ul class="nav-list">
+                    <li><a href="#/books">Books</a></li>
+                    <li><a href="#/comics">Comics</a></li>
+                    <li><a href="#/sale">Sale</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Our Partner</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
