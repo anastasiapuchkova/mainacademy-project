@@ -19,11 +19,11 @@ let app = Sammy('#content', function() {
 
 
     renderer.elements.carousel = function(context, carousel){
-        let element = this.render('templates/partial/carousel.mustache', carousel);
+        let element = this.render('templates/carousel.mustache', carousel);
         element.appendTo(context.$element());
 
         this.load(carousel.dataUrl)
-            .renderEach('templates/partial/carouselItem.mustache')
+            .renderEach('templates/carouselItem.mustache')
             .appendTo("#"+carousel.elementId+" .carousel-inner")
             .then(function() {
                 initCarousel("#"+carousel.elementId);
@@ -33,11 +33,11 @@ let app = Sammy('#content', function() {
 
     renderer.elements.list = function(context, options){
         console.log(options);
-        let element = this.render('templates/partial/list.mustache', options);
+        let element = this.render('templates/list.mustache', options);
         element.appendTo(context.$element());
 
         this.load(options.dataUrl)
-            .renderEach('templates/partial/listItem.mustache')
+            .renderEach('templates/listItem.mustache')
             .appendTo("#list")
             .then(function() {
                 console.log('done');
@@ -85,10 +85,10 @@ let app = Sammy('#content', function() {
         context.$element().html('');
 
         let items = event.getWishListItems();
-        let element = this.render('templates/partial/list.mustache', options);
+        let element = this.render('templates/list.mustache', options);
         element.appendTo(context.$element());
 
-        this.renderEach('templates/partial/wishListItem.mustache', items)
+        this.renderEach('templates/wishListItem.mustache', items)
             .appendTo("#list")
             .then(function() {
                 console.log('done');
@@ -97,7 +97,7 @@ let app = Sammy('#content', function() {
     renderer.pages.details = function(context, options) {
         const self = this;
         context.$element().html('');
-        let element = this.render('templates/partial/details.mustache', options);
+        let element = this.render('templates/details.mustache', options);
         element.appendTo(context.$element());
     };
     //Events

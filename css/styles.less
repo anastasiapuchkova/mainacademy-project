@@ -301,11 +301,15 @@ ul, ol {
 	-moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;
 	box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
 
+	&:last-child{
+		margin-right: 0px;
+
+	}
 	.glyphicon-heart{
 		color: #a80000;
 	}
 	&:hover{
-		 padding:11px 32px;
+		 padding:11px 25px;
 		 border:none;
 		 -webkit-border-radius:24px;
 		 -moz-border-radius:24px;
@@ -330,8 +334,19 @@ ul, ol {
 	 }
 }
 
-.btn-wish-list{
-
+.btn-animated{
+	display: inline-block;
+	.caption-text{
+		transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;
+		display: none;
+		width: 0;
+	}
+	&:hover {
+		.caption-text{
+			width: inherit;
+			display: inline-block;
+		}
+	}
 }
 
 
