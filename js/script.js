@@ -41,6 +41,9 @@ console.log($(selector + ' .item').length, selector + ' .item');
     $(selector+' [data-toggle="tooltip"]').mousemove(function(e){
         $('.tooltip').css({top: e.pageY + 'px', left: e.pageX + 'px'});
     });
+    $(selector+' [data-toggle="tooltip"]').click(function(e){
+        $(this).tooltip('hide');
+    });
 };
 
 /**
