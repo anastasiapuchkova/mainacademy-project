@@ -50,16 +50,16 @@ let app = Sammy('#content', function() {
 
         const carousels = [
             {
-                name:'Comics',
-                dataUrl: 'data/comics.json',
-                elementId:'carousel-comics',
-                pageUrlList: '#/comics'
-            },
-            {
                 name:'Books',
                 dataUrl: 'data/books.json',
                 elementId:'carousel-books',
                 pageUrlList: '#/books'
+            },
+            {
+                name:'Comics',
+                dataUrl: 'data/comics.json',
+                elementId:'carousel-comics',
+                pageUrlList: '#/comics'
             },
             {
                 name:'Sale',
